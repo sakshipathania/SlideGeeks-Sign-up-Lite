@@ -3,6 +3,7 @@ package TestRunner.loginSteps;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
 import java.lang.String;
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
