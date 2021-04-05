@@ -45,7 +45,7 @@ public class SignUp_Step extends SetupClass {
 		System.out.println("URL matching --> Part executed");
 		
 		Thread.sleep(2000);
-		ebElement Join_now1 = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#Semi\ Annual")));
+		WebElement Join_now1 = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#Semi\ Annual")));
 		Thread.sleep(3000);
 		Join_now1.click();
 		Thread.sleep(5000);
