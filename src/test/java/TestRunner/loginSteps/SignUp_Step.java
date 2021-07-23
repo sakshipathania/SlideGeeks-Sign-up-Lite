@@ -58,11 +58,11 @@ public class SignUp_Step extends SetupClass {
 		
 
 		
-		WebElement create_account = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("body > div.afterBody.product-page-wrapper > header > div > div > nav > div > div.header_right.desktop_search > div > div > div > div.contact.login-option > ul > li:nth-child(2) > a")));
-		Thread.sleep(3000);
-		create_account.click();
+		//WebElement create_account = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("body > div.afterBody.product-page-wrapper > header > div > div > nav > div > div.header_right.desktop_search > div > div > div > div.contact.login-option > ul > li:nth-child(2) > a")));
+		//Thread.sleep(3000);
+		//create_account.click();
 		Thread.sleep(2000);
-		//driver.get("https://www.slidegeeks.com/register");
+		driver.get("https://www.slidegeeks.com/register");
 		Thread.sleep(3000);
 		/*WebElement login_signup_btn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(".t3-navbar > ul:nth-child(1) > li:nth-child(10) > a:nth-child(1)")));
 		 Thread.sleep(3000);
