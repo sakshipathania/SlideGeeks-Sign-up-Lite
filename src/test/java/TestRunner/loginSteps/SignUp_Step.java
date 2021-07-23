@@ -63,14 +63,14 @@ public class SignUp_Step extends SetupClass {
 		Thread.sleep(3000);
 		
 		//User go to pricing page and click on subscription
-		driver.get("https://www.slidegeeks.com/subscriptions");
-		Thread.sleep(4000);
-		 WebElement Join_now = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#Monthly")));
-		Thread.sleep(3000);
-		Join_now.click();
-		Thread.sleep(5000);
+		//driver.get("https://www.slidegeeks.com/subscriptions");
+		//Thread.sleep(4000);
+		// WebElement Join_now = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#Monthly")));
+		//Thread.sleep(3000);
+		//Join_now.click();
+		//Thread.sleep(5000);
 		
-		WebElement create_account = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#pg-account-action > div > div:nth-child(1) > div > div > div.btn-wrapper.create_accbtn > a")));
+		WebElement create_account = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("/html/body/div[1]/header/div/div/nav/div/div[1]/div/div/div/div[2]/ul/li[2]/a")));
 		Thread.sleep(3000);
 		create_account.click();
 		Thread.sleep(2000);
