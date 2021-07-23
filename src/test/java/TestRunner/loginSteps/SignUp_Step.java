@@ -23,14 +23,8 @@ public class SignUp_Step extends SetupClass {
 	
 	@Given("^user is already on Website Home Page ii$")
 	public void user_is_already_on_Website_Home_Page_ii() throws Throwable {
-		/*driver.get("https://www.slidegeeks.com/");
-		Thread.sleep(2000);
-		driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
-		log.info("It's opening the website URL");
-		Thread.sleep(1000);*/
 		driver.get("https://www.slidegeeks.com/");
-		//driver.get("https://www.slidegeeks.com/");
-		driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
+		driver.manage().timeouts().pageLoadTimeout(8, TimeUnit.SECONDS);
 		log.info("It's opening the website URL");
 		Thread.sleep(1000);
 		
@@ -62,13 +56,7 @@ public class SignUp_Step extends SetupClass {
 	    
 		Thread.sleep(3000);
 		
-		//User go to pricing page and click on subscription
-		//driver.get("https://www.slidegeeks.com/subscriptions");
-		//Thread.sleep(4000);
-		// WebElement Join_now = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#Monthly")));
-		//Thread.sleep(3000);
-		//Join_now.click();
-		//Thread.sleep(5000);
+
 		
 		WebElement create_account = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[1]/header/div/div/nav/div/div[1]/div/div/div/div[2]/ul/li[2]/a")));
 		Thread.sleep(3000);
