@@ -138,10 +138,24 @@ public class SignUp_Step extends SetupClass {
 		
 	}
 
-	@Then("^Stripe Checkout$")
-	public void Stripe_Checkout() throws Throwable {
+	@Then("^Product Download$")
+	public void Product_Download() throws Throwable {
 		
-		driver.get("https://www.slidegeeks.com/subscriptions");
+		Thread.sleep(1000);
+		WebElement Popular_ppt= driver.findElement(By.xpath("/html/body/div[1]/header/div/div/nav/div/div[2]/div[2]/div/ul/li[3]/a"));
+	     Thread.sleep(1000);
+		Popular_ppt.click();
+	
+		Thread.sleep(2000);
+		WebElement Popular_product= driver.findElement(By.xpath("/html/body/div[1]/div[3]/div/div/section[2]/div/div[2]/div/div[2]/div/a/div/img"));
+		Thread.sleep(3000);
+		Popular_product.click();
+		Thread.sleep(2000);  
+		
+		driver.findElement(By.cssSelector("#download_product")).click();
+		Thread.sleep(8000);
+		
+		
 		Thread.sleep(4000);
 		 WebElement Join_now = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#Monthly")));
 		Thread.sleep(3000);
@@ -196,10 +210,10 @@ public class SignUp_Step extends SetupClass {
 	    }	
 		
 		Thread.sleep(3000);
-		 WebElement Stripe_email = driver.findElement(By.cssSelector("#email"));
-		Thread.sleep(2000);
-		 Stripe_email.sendKeys("slidetech.qa@gmail.com");
-		Thread.sleep(2000);
+		// WebElement Stripe_email = driver.findElement(By.cssSelector("#email"));
+		//Thread.sleep(2000);
+		// Stripe_email.sendKeys("slidetech.qa@gmail.com");
+		//Thread.sleep(2000);
 		 WebElement Stripe_back = driver.findElement(By.cssSelector("#root > div > div > div.App-Overview > header > div > div > a > div > div > div.Header-backArrowContainer > svg"));
 		Thread.sleep(2000);
 			Stripe_back.click();
@@ -208,9 +222,31 @@ public class SignUp_Step extends SetupClass {
 		//Thread.sleep(2000);
 		
 
-         WebElement Signout = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[@href ='/logout']")));
+        Thread.sleep(3000);
+	  //  driver.get("https://www.slidegeeks.com/component/pago/checkout");
+		//Thread.sleep(2000);
+	WebElement Account = driver.findElement(By.xpath("/html/body/div[1]/header/div/div/nav/div/div[2]/div[2]/div[2]/div/div[2]/ul/li[1]/a"));
 		Thread.sleep(3000);
-		Signout.click();							    
+		Account.click();
+                 Thread.sleep(3000);
+	WebElement Delete_Account = driver.findElement(By.xpath("/html/body/div[1]/div[3]/div/div/div/div/div[2]/div/ul/li[6]/a"));
+		Thread.sleep(3000);
+			js.executeScript("arguments[0].scrollIntoView();",Delete_Account);	
+		Thread.sleep(3000);
+		Delete_Account.click();
+                 Thread.sleep(3000);
+	WebElement Delete_Account_reason = driver.findElement(By.cssSelector("#only-free-download-product"));
+		Thread.sleep(3000);
+		Delete_Account_reason.click();
+                 Thread.sleep(3000);
+	WebElement Delete_Profile = driver.findElement(By.xpath("/html/body/div[1]/div[4]/div/div/div[3]/button[1]"));
+		Thread.sleep(3000);
+		Delete_Profile.click();
+                 Thread.sleep(3000);
+	WebElement No_Delete = driver.findElement(By.xpath("/html/body/div[1]/div[5]/div/div/div[3]/button[2]"));
+		Thread.sleep(3000);
+		No_Delete.click();
+                 Thread.sleep(3000);							    
 									    
 	}
 
