@@ -70,7 +70,7 @@ public class SignUp_Step extends SetupClass {
 		//Join_now.click();
 		//Thread.sleep(5000);
 		
-		WebElement create_account = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("/html/body/div[1]/header/div/div/nav/div/div[1]/div/div/div/div[2]/ul/li[2]/a")));
+		WebElement create_account = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[1]/header/div/div/nav/div/div[1]/div/div/div/div[2]/ul/li[2]/a")));
 		Thread.sleep(3000);
 		create_account.click();
 		Thread.sleep(2000);
