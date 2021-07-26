@@ -140,7 +140,7 @@ public class SignUp_Step extends SetupClass {
 		Popular_product.click();
 		Thread.sleep(2000);  
 		
-		 WebElement download_btn = driver.findElement(By.className("btn-download pg-button pg-addtocart pg-green-background-btn vwo_subscribe_click"));
+		 WebElement download_btn = driver.findElement(By.xpath("//*[@class=\"btn-download pg-button pg-addtocart pg-green-background-btn\"]"));
 		 Thread.sleep(3000);
 		 download_btn.click();
 		 Thread.sleep(3000);
