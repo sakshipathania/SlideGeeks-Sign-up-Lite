@@ -217,9 +217,9 @@ public class SignUp_Step extends SetupClass {
         Thread.sleep(3000);
 	  //  driver.get("https://www.slidegeeks.com/component/pago/checkout");
 		//Thread.sleep(2000);
-	//WebElement Account = driver.findElement(By.xpath("/html/body/div[1]/header/div/div/nav/div/div[2]/div[2]/div[2]/div/div[2]/ul/li[1]/a"));
+	WebElement Account = driver.findElement(By.xpath("/html/body/div[1]/header/div/div/nav/div/div[2]/div[2]/div[2]/div/div[2]/ul/li[1]/a"));
 		
-	WebElement Account  = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[normalize-space()='Account']//i")));
+	//WebElement Account  = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[normalize-space()='Account']//i")));
 		Thread.sleep(3000);
 		Account.click();
                  Thread.sleep(3000);
