@@ -29,30 +29,16 @@ public class SignUp_Step extends SetupClass {
 		Thread.sleep(1000);
 		
 		try {
-			WebElement iframe = driver.findElement(By.id("livechat-full-view"));
-			if(iframe.isDisplayed()) {
-				driver.switchTo().frame(iframe);   
-				 Actions act = new Actions(driver);
-				 act.moveToElement(driver.findElement(By.cssSelector("#title .icon-minimize"))).build().perform();
-				 Thread.sleep(2000);
-					WebElement chat1=driver.findElement(By.cssSelector("#title .icon-minimize"));
-					 Thread.sleep(1000);
-						chat1.click();
-						 Thread.sleep(1000);
-						 driver.switchTo().defaultContent();
-						 Thread.sleep(1000);
-						 driver.switchTo().parentFrame();
-					 Thread.sleep(1000);
+			WebElement logout = driver.findElement(By.xpath("//a[@href ='/logout']"));
+			if (logout.isEnabled()) {
+				logout.click();
+				Thread.sleep(1000);
+				driver.navigate().refresh();
+				Thread.sleep(1000);
 			}
-			else {
-				
+		} catch (NoSuchElementException Ext) {
 
-			System.out.println("chat window does not open");
-			}
 		}
-				catch(NoSuchElementException NCP) {
-					
-				}
 	    
 		Thread.sleep(3000);
 		
@@ -61,14 +47,14 @@ public class SignUp_Step extends SetupClass {
 		//WebElement create_account = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("body > div.afterBody.product-page-wrapper > header > div > div > nav > div > div.header_right.desktop_search > div > div > div > div.contact.login-option > ul > li:nth-child(2) > a")));
 		//Thread.sleep(3000);
 		//create_account.click();
-		Thread.sleep(2000);
-		driver.get("https://www.slidegeeks.com/register");
-		Thread.sleep(3000);
-		/*WebElement login_signup_btn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(".t3-navbar > ul:nth-child(1) > li:nth-child(10) > a:nth-child(1)")));
-		 Thread.sleep(3000);
+		//Thread.sleep(2000);
+		//driver.get("https://www.slidegeeks.com/register");
+		//Thread.sleep(3000);
+		WebElement login_signup_btn = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[@class='signupclass']")));
+		 Thread.sleep(1000);
 		 login_signup_btn.click();
-		 Thread.sleep(3000);
-		 */
+		 Thread.sleep(1000);
+		 
 		WebElement name = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@id='jform_name1']")));
 		 Thread.sleep(3000);
 		 name.sendKeys("Automated Program");
@@ -222,27 +208,27 @@ public class SignUp_Step extends SetupClass {
 	//WebElement Account  = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[normalize-space()='Account']//i")));
 		Thread.sleep(3000);
 		Account.click();
-                 Thread.sleep(3000);
+                 Thread.sleep(1000);
 	//WebElement Delete_Account = driver.findElement(By.xpath("/html/body/div[1]/div[3]/div/div/div/div/div[2]/div/ul/li[6]/a"));
 		
 		WebElement Delete_Account = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[normalize-space()='Delete Account']")));
-		Thread.sleep(3000);
+		Thread.sleep(1000);
 			js.executeScript("arguments[0].scrollIntoView();",Delete_Account);	
-		Thread.sleep(3000);
+		Thread.sleep(1000);
 		Delete_Account.click();
-                 Thread.sleep(3000);
+                 Thread.sleep(1000);
 	WebElement Delete_Account_reason = driver.findElement(By.cssSelector("#only-free-download-product"));
-		Thread.sleep(3000);
+		Thread.sleep(1000);
 		Delete_Account_reason.click();
-                 Thread.sleep(3000);
+                 Thread.sleep(1000);
 	WebElement Delete_Profile = driver.findElement(By.xpath("/html/body/div[1]/div[4]/div/div/div[3]/button[1]"));
-		Thread.sleep(3000);
+		Thread.sleep(1000);
 		Delete_Profile.click();
-                 Thread.sleep(3000);
+                 Thread.sleep(1000);
 	WebElement No_Delete = driver.findElement(By.xpath("/html/body/div[1]/div[5]/div/div/div[3]/button[2]"));
-		Thread.sleep(3000);
+		Thread.sleep(1000);
 		No_Delete.click();
-                 Thread.sleep(3000);							    
+                 Thread.sleep(1000);							    
 									    
 	}
 
