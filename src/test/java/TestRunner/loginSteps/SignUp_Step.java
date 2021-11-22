@@ -56,9 +56,9 @@ public class SignUp_Step extends SetupClass {
 		 Thread.sleep(1000);
 		 
 		WebElement name = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@id='jform_name1']")));
-		 Thread.sleep(3000);
+		// Thread.sleep(3000);
 		 name.sendKeys("Automated Program");
-		 Thread.sleep(3000);
+		 Thread.sleep(1000);
 	   
 	
 		// Generate Random Email Address
@@ -83,15 +83,15 @@ public class SignUp_Step extends SetupClass {
 		Thread.sleep(2000);
 		
 		WebElement new_email = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#jform_email1")));
-		 Thread.sleep(3000);
+		// Thread.sleep(3000);
 		 new_email.sendKeys(full_email);
-		 Thread.sleep(3000);
+		 Thread.sleep(1000);
 		
 	
 		WebElement password = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#jform_password1")));
-		 Thread.sleep(3000);
+		// Thread.sleep(3000);
 		password.sendKeys("Geeks@123");
-		 Thread.sleep(3000);
+		 Thread.sleep(1000);
 		 
 		 WebElement confirm_passwoed = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#jform_password2")));
 		 Thread.sleep(3000);
@@ -100,15 +100,15 @@ public class SignUp_Step extends SetupClass {
 	    
 	
 		WebElement captcha = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#captchtext")));
-		 Thread.sleep(3000);
+		// Thread.sleep(3000);
 		captcha.sendKeys("Y3Tt6bfwI");
-		 Thread.sleep(3000);
+		 Thread.sleep(1000);
 	    
 
 		WebElement register_btn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(".pg-register-button-new")));
-		 Thread.sleep(3000);
+		// Thread.sleep(3000);
 		register_btn.click();
-		 Thread.sleep(5000);
+		 Thread.sleep(2000);
 		
 	}
 
@@ -122,34 +122,34 @@ public class SignUp_Step extends SetupClass {
 	
 		Thread.sleep(2000);
 		WebElement Popular_product= driver.findElement(By.xpath("/html/body/div[1]/div[3]/div/div/section[2]/div/div[2]/div/div[2]/div/a/div/img"));
-		Thread.sleep(3000);
+		//Thread.sleep(3000);
 		Popular_product.click();
 		Thread.sleep(2000);  
 		
 		 WebElement download_btn = driver.findElement(By.xpath("//a[@href ='https://www.slidegeeks.com/subscriptions']"));
-		 Thread.sleep(3000);
+		// Thread.sleep(3000);
 		 download_btn.click();
 		 Thread.sleep(3000);
 		
 		
-		Thread.sleep(4000);
+		Thread.sleep(1000);
 		 WebElement Join_now = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#Monthly")));
-		Thread.sleep(3000);
+		//Thread.sleep(3000);
 		Join_now.click();
-		Thread.sleep(5000);
+		Thread.sleep(2000);
 		//String URL = driver.getCurrentUrl();
                // Assert.assertEquals(URL, "https://www.slidegeeks.com/component/pago/checkout");
 		//System.out.println("URL matching --> Part executed");
 		//Thread.sleep(5000);
 		 try {
-		Thread.sleep(1400);
+		Thread.sleep(1000);
 		// select stripe option
 		//WebElement co_btn  =  wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#pg-checkout-billing-payment-form > div > div:nth-child(1) > label")));
 	
 		WebElement  co_btn = driver.findElement(By.xpath("/html[1]/body[1]/div[1]/div[4]/div[1]/div[2]/div[1]/div[1]/form[1]/div[1]/div[1]/input[1]"));
 		Thread.sleep(2000);
 	         co_btn.click();
-		Thread.sleep(5000);
+		Thread.sleep(3000);
 	     } catch( NoSuchElementException popup) { 
 	     }
 		
@@ -174,7 +174,7 @@ public class SignUp_Step extends SetupClass {
 		Thread.sleep(3000);
 	    System.out.println("Title of the Page is --> "+stripe_page_title);
 	    
-	    String page_title="https://checkout.stripe.com/";
+	    String page_title="Slideteam PTE LTD";
 	    
 	    if(page_title.equalsIgnoreCase(stripe_page_title))
 	    {
@@ -195,12 +195,12 @@ public class SignUp_Step extends SetupClass {
 		 WebElement Stripe_back = driver.findElement(By.cssSelector("#root > div > div > div.App-Overview > header > div > div > a > div > div > div.Header-backArrowContainer > svg"));
 		Thread.sleep(2000);
 			Stripe_back.click();
-		Thread.sleep(5000);
+		Thread.sleep(3000);
 		//driver.get("https://www.slidegeeks.com/component/pago/checkout");
 		//Thread.sleep(2000);
 		
 
-        Thread.sleep(3000);
+        Thread.sleep(1000);
 	  //  driver.get("https://www.slidegeeks.com/component/pago/checkout");
 		//Thread.sleep(2000);
 	WebElement Account = driver.findElement(By.xpath("/html/body/div[1]/header/div/div/nav/div/div[2]/div[2]/div[2]/div/div[2]/ul/li[1]/a"));
