@@ -123,6 +123,8 @@ public class SignUp_Step extends SetupClass {
 		Thread.sleep(2000);
 		WebElement Popular_product= driver.findElement(By.xpath("/html/body/div[1]/div[3]/div/div/section[2]/div/div[2]/div/div[2]/div/a/div/img"));
 		//Thread.sleep(3000);
+		js.executeScript("arguments[0].scrollIntoView();",Popular_product);
+		Thread.sleep(1000); 
 		Popular_product.click();
 		Thread.sleep(2000);  
 		
