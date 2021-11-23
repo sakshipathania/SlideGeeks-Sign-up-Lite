@@ -202,15 +202,15 @@ public class SignUp_Step extends SetupClass {
 		//Thread.sleep(2000);
 		
 
-        Thread.sleep(1000);
+        Thread.sleep(3000);
 	  //  driver.get("https://www.slidegeeks.com/component/pago/checkout");
 		//Thread.sleep(2000);
-	WebElement Account = driver.findElement(By.xpath("/html/body/div[1]/header/div/div/nav/div/div[2]/div[2]/div[2]/div/div[2]/ul/li[1]/a"));
-		
+	WebElement Account = driver.findElement(By.xpath("//a[normalize-space()='Account']"));
+		js.executeScript("arguments[0].click();", Account);
 	//WebElement Account  = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[normalize-space()='Account']//i")));
-		Thread.sleep(3000);
-		Account.click();
-                 Thread.sleep(1000);
+		Thread.sleep(2000);
+		//Account.click();
+                // Thread.sleep(1000);
 	//WebElement Delete_Account = driver.findElement(By.xpath("/html/body/div[1]/div[3]/div/div/div/div/div[2]/div/ul/li[6]/a"));
 		
 		WebElement Delete_Account = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[normalize-space()='Delete Account']")));
