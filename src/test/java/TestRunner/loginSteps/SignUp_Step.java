@@ -115,7 +115,7 @@ public class SignUp_Step extends SetupClass {
 	@Then("^Product Download$")
 	public void Product_Download() throws Throwable {
 		
-		Thread.sleep(1000);
+		Thread.sleep(3000);
 		WebElement Popular_ppt= driver.findElement(By.xpath("/html/body/div[1]/header/div/div/nav/div/div[2]/div[2]/div/ul/li[3]/a"));
 	     Thread.sleep(1000);
 		Popular_ppt.click();
