@@ -24,11 +24,17 @@ public class SignUp_Step extends SetupClass {
 	@Given("^user is already on Website Home Page ii$")
 	public void user_is_already_on_Website_Home_Page_ii() throws Throwable {
 		driver.get("https://www.slidegeeks.com/");
-		driver.manage().timeouts().pageLoadTimeout(8, TimeUnit.SECONDS);
+		
+		driver.manage().deleteAllCookies();
+		Thread.sleep(4000); // wait 7 seconds to clear cookies.
+		driver.navigate().refresh();
+		Thread.sleep(2000);
+		driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(9000, TimeUnit.MILLISECONDS);
 		log.info("It's opening the website URL");
 		Thread.sleep(1000);
 		
-		try {
+		/*try {
 			WebElement logout = driver.findElement(By.xpath("//a[@href ='/logout']"));
 			if (logout.isEnabled()) {
 				logout.click();
@@ -38,7 +44,7 @@ public class SignUp_Step extends SetupClass {
 			}
 		} catch (NoSuchElementException Ext) {
 
-		}
+		}*/
 	    
 		Thread.sleep(3000);
 		
@@ -108,7 +114,7 @@ public class SignUp_Step extends SetupClass {
 		WebElement register_btn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(".pg-register-button-new")));
 		// Thread.sleep(3000);
 		register_btn.click();
-		 Thread.sleep(2000);
+		 Thread.sleep(3000);
 		
 	}
 
