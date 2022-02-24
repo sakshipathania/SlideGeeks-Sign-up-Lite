@@ -238,6 +238,7 @@ public class SignUp_Step extends SetupClass {
 		No_Delete.click();
                 Thread.sleep(3000);	
 		//verify Account Deletion message
+		
 		String verifyMessage = wait
 				.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='alert-message login-sucesmsg']")))
 				.getText();
