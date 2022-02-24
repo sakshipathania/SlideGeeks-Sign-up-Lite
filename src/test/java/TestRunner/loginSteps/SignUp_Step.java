@@ -238,12 +238,12 @@ public class SignUp_Step extends SetupClass {
 		No_Delete.click();
                 Thread.sleep(3000);	
 		//verify Account Deletion message
-		/*String verifyMessage = wait
+		String verifyMessage = wait
 				.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='alert-message login-sucesmsg']")))
 				.getText();
 		System.out.println("verifyMessage = " + verifyMessage );
 
-		Assert.assertTrue("Your are not on paypal page", verifyMessage.contentEquals("Your Account has been deleted successfully."));*/
+		Assert.assertTrue("Your are not on paypal page", verifyMessage.contentEquals("Your Account has been deleted successfully."));
 									    
 	}
 
