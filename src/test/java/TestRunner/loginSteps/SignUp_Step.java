@@ -134,14 +134,14 @@ public class SignUp_Step extends SetupClass {
 		Popular_product.click();
 		Thread.sleep(2000);  
 		
-		 WebElement download_btn = driver.findElement(By.xpath("//a[@href ='https://www.slidegeeks.com/subscriptions']"));
+		 WebElement download_btn = driver.findElement(By.xpath("//a[@id='download_product']"));
 		// Thread.sleep(3000);
 		 download_btn.click();
 		 Thread.sleep(3000);
 		
 		
 		Thread.sleep(1000);
-		 WebElement Join_now = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#Monthly")));
+		 WebElement Join_now = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@id='Individual']//form[@name='hikashop_product_form_205548_hikashop_category_information_menu_117']//span[contains(text(),'Join now')]")));
 		//Thread.sleep(3000);
 		Join_now.click();
 		Thread.sleep(2000);
@@ -154,7 +154,7 @@ public class SignUp_Step extends SetupClass {
 		// select stripe option
 		//WebElement co_btn  =  wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#pg-checkout-billing-payment-form > div > div:nth-child(1) > label")));
 	
-		WebElement  co_btn = driver.findElement(By.xpath("/html[1]/body[1]/div[1]/div[4]/div[1]/div[2]/div[1]/div[1]/form[1]/div[1]/div[1]/input[1]"));
+		WebElement  co_btn = driver.findElement(By.xpath("//label[@for='payment_radio_1_2__stripe_2']"));
 		Thread.sleep(2000);
 	         co_btn.click();
 		Thread.sleep(3000);
@@ -164,7 +164,7 @@ public class SignUp_Step extends SetupClass {
 		// place order button 
 		try {
 			
-		 WebElement place_order_btn  = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("body > div.afterBody.checkout-wrapper.main-wrapper.no-left-menu > div.main_wrapper > div > div.checkout-inner-wrapper > div.checkout-box-wrapper.checkout-order > div > div > table > tbody > tr:nth-child(4) > td:nth-child(1) > button.btn.primary-btn.pg-button.pg-checkout-continue")));
+		 WebElement place_order_btn  = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("//button[@id='hikabtn_checkout_next']")));
 			Thread.sleep(2000);
 			js.executeScript("arguments[0].scrollIntoView();",place_order_btn);	
 			//js.executeScript("arguments[0].click();", place_order_btn);
