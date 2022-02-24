@@ -61,7 +61,7 @@ public class SignUp_Step extends SetupClass {
 		 login_signup_btn.click();
 		 Thread.sleep(1000);
 		 
-		WebElement name = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@id='jform_name1']")));
+		WebElement name = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@id='register_name']")));
 		// Thread.sleep(3000);
 		 name.sendKeys("Automated Program");
 		 Thread.sleep(1000);
@@ -88,18 +88,18 @@ public class SignUp_Step extends SetupClass {
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);	
 		Thread.sleep(2000);
 		
-		WebElement new_email = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#jform_email1")));
+		WebElement new_email = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("//input[@id='register_email']")));
 		// Thread.sleep(3000);
 		 new_email.sendKeys(full_email);
 		 Thread.sleep(1000);
 		
 	
-		WebElement password = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#jform_password1")));
+		WebElement password = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("//input[@id='register_password']")));
 		// Thread.sleep(3000);
 		password.sendKeys("Geeks@123");
 		 Thread.sleep(1000);
 		 
-		 WebElement confirm_passwoed = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#jform_password2")));
+		 WebElement confirm_passwoed = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("//input[@id='register_password2']")));
 		 Thread.sleep(3000);
 		confirm_passwoed.sendKeys("Geeks@123");
 		 Thread.sleep(3000);
