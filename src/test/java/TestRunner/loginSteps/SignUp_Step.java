@@ -134,7 +134,7 @@ public class SignUp_Step extends SetupClass {
 		Popular_product.click();
 		Thread.sleep(2000);  
 		
-		 WebElement download_btn = driver.findElement(By.xpath("//a[@id='download_product']"));
+		 WebElement download_btn = driver.findElement(By.linkText("Download this Presentation"));
 		// Thread.sleep(3000);
 		 download_btn.click();
 		 Thread.sleep(3000);
