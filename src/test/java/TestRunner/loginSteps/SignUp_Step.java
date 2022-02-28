@@ -164,7 +164,7 @@ public class SignUp_Step extends SetupClass {
 		// place order button 
 		try {
 			
-		 WebElement place_order_btn  = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("//button[@id='hikabtn_checkout_next']")));
+		 WebElement place_order_btn  = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#hikabtn_checkout_next")));
 			Thread.sleep(2000);
 			js.executeScript("arguments[0].scrollIntoView();",place_order_btn);	
 			//js.executeScript("arguments[0].click();", place_order_btn);
