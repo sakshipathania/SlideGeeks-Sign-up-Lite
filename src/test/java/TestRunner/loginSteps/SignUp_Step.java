@@ -114,7 +114,7 @@ public class SignUp_Step extends SetupClass {
 		WebElement register_btn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(".pg-register-button-new")));
 		// Thread.sleep(3000);
 		register_btn.click();
-		 Thread.sleep(3000);
+		 Thread.sleep(5000);
 		
 	}
 
