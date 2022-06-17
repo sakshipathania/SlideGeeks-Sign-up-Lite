@@ -59,7 +59,7 @@ public class SignUp_Step extends SetupClass {
 		WebElement login_signup_btn = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[@class='signupclass']")));
 		 Thread.sleep(1000);
 		 login_signup_btn.click();
-		 Thread.sleep(1000);
+		 Thread.sleep(5000);
 		 
 		WebElement name = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@id='register_name']")));
 		// Thread.sleep(3000);
