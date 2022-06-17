@@ -29,7 +29,7 @@ public class SignUp_Step extends SetupClass {
 		Thread.sleep(4000); // wait 7 seconds to clear cookies.
 		driver.navigate().refresh();
 		Thread.sleep(2000);
-		driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
+		driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
 		driver.manage().timeouts().implicitlyWait(9000, TimeUnit.MILLISECONDS);
 		log.info("It's opening the website URL");
 		Thread.sleep(1000);
