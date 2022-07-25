@@ -236,7 +236,7 @@ public class SignUp_Step extends SetupClass {
 	WebElement No_Delete = driver.findElement(By.xpath("/html/body/div[1]/div[5]/div/div/div[3]/button[2]"));
 		Thread.sleep(1000);
 		No_Delete.click();
-                Thread.sleep(3000);	
+                Thread.sleep(7000);	
 		//verify Account Deletion message
 		
 		String verifyMessage = wait
