@@ -244,7 +244,7 @@ public class SignUp_Step extends SetupClass {
 				.getText();
 		System.out.println("verifyMessage = " + verifyMessage );
 
-		Assert.assertTrue("Your are not on paypal page", verifyMessage.contentEquals("Your Account has been deleted successfully."));
+		Assert.assertTrue("Your account is not deleted", verifyMessage.contentEquals("Your Account has been deleted successfully."));
 									    
 	}
 
