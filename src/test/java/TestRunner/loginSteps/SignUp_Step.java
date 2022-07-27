@@ -88,16 +88,16 @@ public class SignUp_Step extends SetupClass {
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);	
 		Thread.sleep(2000);
 		
-		WebElement new_email = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@id='register_email']")));
-		// Thread.sleep(3000);
-		 new_email.sendKeys(full_email);
-		 Thread.sleep(1000);
-		
-	
-		WebElement password = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@id='register_password']")));
-		// Thread.sleep(3000);
+		WebElement new_email = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#register_email")));
+		new_email.clear();
+		new_email.sendKeys(full_email);
+		Thread.sleep(3000);
+
+		WebElement password = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#register_password")));
+		password.clear();
 		password.sendKeys("Geeks@123");
-		 Thread.sleep(1000);
+		Thread.sleep(3000);
+
 		 
 		 WebElement confirm_passwoed = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@id='register_password2']")));
 		 Thread.sleep(3000);
