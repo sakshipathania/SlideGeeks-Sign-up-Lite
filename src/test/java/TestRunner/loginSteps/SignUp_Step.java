@@ -62,7 +62,7 @@ public class SignUp_Step extends SetupClass {
 		login_signup_btn.click();
 		Thread.sleep(2000);
 
-		driver.get("https://www.slidegeeks.com/register?123=098");
+		driver.get("https://www.slidegeeks.com/register?198=098");
 		Thread.sleep(4000);
 		WebElement name = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@id='register_name']")));
 		// Thread.sleep(3000);
@@ -124,14 +124,13 @@ public class SignUp_Step extends SetupClass {
 	public void Product_Download() throws Throwable {
 
 		Thread.sleep(3000);
-		WebElement Popular_ppt = driver
-				.findElement(By.xpath("/html/body/div[1]/header/div/div/nav/div/div[2]/div[2]/div/ul/li[3]/a"));
+		WebElement Popular_ppt = driver.findElement(By.xpath("//a[normalize-space()='Most Popular']"));
 		Thread.sleep(1000);
 		Popular_ppt.click();
 
 		Thread.sleep(2000);
-		WebElement Popular_product = driver.findElement(
-				By.xpath("/html/body/div[1]/div[3]/div/div/section[2]/div/div[2]/div/div[2]/div/a/div/img"));
+		WebElement Popular_product = driver.findElement(By.xpath(
+				"//img[@title='Up Skilling Vector With Progress In Content Writing Ppt PowerPoint Presentation Styles Professional PDF']"));
 		// Thread.sleep(3000);
 		js.executeScript("arguments[0].scrollIntoView();", Popular_product);
 		Thread.sleep(1000);
@@ -161,7 +160,8 @@ public class SignUp_Step extends SetupClass {
 			// wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#pg-checkout-billing-payment-form
 			// > div > div:nth-child(1) > label")));
 
-			WebElement co_btn = driver.findElement(By.xpath("//label[@for='payment_radio_1_2__stripe_2']"));
+			WebElement co_btn = wait.until(
+					ExpectedConditions.elementToBeClickable(By.xpath("//label[@for='payment_radio_1_2__stripe_2']")));
 			Thread.sleep(2000);
 			co_btn.click();
 			Thread.sleep(3000);
@@ -216,44 +216,41 @@ public class SignUp_Step extends SetupClass {
 		Thread.sleep(3000);
 		// driver.get("https://www.slidegeeks.com/component/pago/checkout");
 		// Thread.sleep(2000);
-		WebElement Account = driver.findElement(By.xpath("//a[normalize-space()='Account']"));
-		js.executeScript("arguments[0].click();", Account);
-		// WebElement Account =
-		// wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[normalize-space()='Account']//i")));
-		Thread.sleep(2000);
-		// Account.click();
-		// Thread.sleep(1000);
-		// WebElement Delete_Account =
-		// driver.findElement(By.xpath("/html/body/div[1]/div[3]/div/div/div/div/div[2]/div/ul/li[6]/a"));
-
+		WebElement Account = wait
+				.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[normalize-space()='Account']")));
+		Thread.sleep(3000);
+		Account.click();
+		Thread.sleep(3000);
 		WebElement Delete_Account = wait
 				.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[normalize-space()='Delete Account']")));
-		Thread.sleep(1000);
+		Thread.sleep(3000);
 		js.executeScript("arguments[0].scrollIntoView();", Delete_Account);
-		Thread.sleep(1000);
+		Thread.sleep(3000);
 		Delete_Account.click();
-		Thread.sleep(1000);
-		WebElement Delete_Account_reason = driver.findElement(By.cssSelector("#only-free-download-product"));
-		Thread.sleep(1000);
+		Thread.sleep(3000);
+		WebElement Delete_Account_reason = wait
+				.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#only-free-download-product")));
+		Thread.sleep(3000);
 		Delete_Account_reason.click();
-		Thread.sleep(1000);
-		WebElement Delete_Profile = driver.findElement(By.xpath("/html/body/div[1]/div[4]/div/div/div[3]/button[1]"));
-		Thread.sleep(1000);
+		Thread.sleep(3000);
+		WebElement Delete_Profile = wait
+				.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@id = 'delete_profile']")));
+		Thread.sleep(3000);
 		Delete_Profile.click();
-		Thread.sleep(1000);
-		WebElement No_Delete = driver.findElement(By.xpath("/html/body/div[1]/div[5]/div/div/div[3]/button[2]"));
-		Thread.sleep(1000);
+		Thread.sleep(3000);
+		WebElement No_Delete = wait.until(
+				ExpectedConditions.elementToBeClickable(By.xpath("//button[@class = 'btn btn-default button_2']")));
+		Thread.sleep(3000);
 		No_Delete.click();
 		Thread.sleep(7000);
-		// verify Account Deletion message
 
-		String verifyMessage = wait.until(
+		String verifyDeleteAccountMessage = wait.until(
 				ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='alert-message login-sucesmsg']")))
 				.getText();
-		System.out.println("verifyMessage = " + verifyMessage);
-
-		Assert.assertTrue("Your account is not deleted",
-				verifyMessage.contentEquals("Your Account has been deleted successfully."));
+		System.out.println("verifyText1 = " + verifyDeleteAccountMessage);
+		Assert.assertTrue("Your are not on paypal page",
+				verifyDeleteAccountMessage.contentEquals("Your Account has been deleted successfully."));
+		Thread.sleep(3000);
 
 	}
 
